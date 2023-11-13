@@ -1,5 +1,6 @@
 class Dinosaurio:
-    def __init__(self, vida, energia,posicion):
+    def __init__(self,nombre, vida, energia,posicion):
+        self.nombre = nombre
         self.vida = vida
         self.energia = energia
         self.posicion = posicion
@@ -33,8 +34,10 @@ class Dinosaurio:
     def comer(self):
         self.energia = 100
 
-    def desplazar(self,nuevaPos):
-        self.posicion = nuevaPos
+    def desplazar(self,casillas):
+        self.posicion += casillas
+
+
 
 
 

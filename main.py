@@ -1,16 +1,22 @@
-# This is a sample Python script.
+import random
+import time
+from Dinosaurio import  *
+from Trike import *
+from Rex import *
+from Spino import *
+from FactoriaDinos import *
+listaDinos = []
+listaDinos = crearDinos()
+salir = True
 
-# Press Mayús+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+rondas = 5
+while rondas > 0:
+    for a in listaDinos:
+        print(f"Nombre: {a.nombre} , Posicion: {a.posicion}")
+        casillas = random.randint(1,10)
+        a.desplazar(casillas)
+        print(f"Nombre: {a.nombre} , Posicion: {a.posicion}")
+        time.sleep(3)
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    rondas -= 1
