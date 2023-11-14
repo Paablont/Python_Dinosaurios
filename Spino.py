@@ -10,7 +10,8 @@ class Spino(Dinosaurio):
 
     def desplazar(self,casillas):
         super().desplazar(casillas)
-        self.energia -= 2
+        for a in range(casillas):
+            self.energia -= 2
 
     def atacado(self,probabilidad):
         if probabilidad <= 5:

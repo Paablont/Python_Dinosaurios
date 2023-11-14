@@ -9,8 +9,13 @@ class Trike(Dinosaurio):
 
     def desplazar(self,casillas):
         super().desplazar(casillas)
-        self.energia -= 5
+        for a in range(casillas):
+            self.energia -= 5
 
     def atacado(self,probabilidad):
         if probabilidad <= 8:
             self.vida = 0
+
+
+
+

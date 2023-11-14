@@ -4,6 +4,7 @@ class Dinosaurio:
         self.vida = vida
         self.energia = energia
         self.posicion = posicion
+        # self.probSobrevivir = probSobrevivir
 
     @property
     def vida(self):
@@ -29,7 +30,13 @@ class Dinosaurio:
     @posicion.setter
     def posicion(self, posicion):
         self._posicion = posicion
+    @property
+    def probSobrevivir(self):
+        return self._probSobrevivir
 
+    @probSobrevivir.setter
+    def probSobrevivir(self,probSobrevivir):
+         self._probSobrevivir = probSobrevivir
 
     def comer(self):
         self.energia = 100
@@ -37,7 +44,11 @@ class Dinosaurio:
     def desplazar(self,casillas):
         self.posicion += casillas
 
-
+    def __str__(self):
+        return (f"Nombre: {self.nombre} \n"
+                f"Vida: {self.vida}\n"
+                f"Energia: {self.energia}\n"
+                f"Posicion: {self.posicion}")
 
 
 
