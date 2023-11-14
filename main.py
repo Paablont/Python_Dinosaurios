@@ -13,13 +13,15 @@ salir = True
 rondas = 5
 
 while rondas > 0:
-    if len(listaDinos) == 0:
+    if len(listaDinos)-1 == 0:
+        print("Todos los dinos han muerto. Fin de la simulacion")
         rondas = 0
     else:
+        print(f"******************** Ronda numero {rondas} ***********************")
         for a in listaDinos:
-            print(f"******************** Ronda numero {rondas} ***********************")
+            print("------------------------------------------------------")
             print(f"TURNO DE:")
-            print(f" {a}")
+            print(f"{a}")
 
             accion = random.randint(1, 3)
             if accion == 1:
@@ -38,7 +40,7 @@ while rondas > 0:
                 print(f"{a.nombre} ha comido. Su energia ha pasado de {energiaAntigua} a {a.energia}")
                 print()
             if accion == 3:
-                numPresa = random.randint(1, len(listaDinos))
+                numPresa = random.randint(1, len(listaDinos) -1 )
 
                 presa = listaDinos[numPresa]
                 if isinstance(a, Trike):
@@ -55,7 +57,13 @@ while rondas > 0:
                         a.vida = 0
                         print(f"El atacante {a.nombre} ha muerto")
                         listaDinos.remove(a)
-            print("************************************************************")
+            print("------------------------------------------------------")
+
             print()
-    rondas -= 1
-    time.sleep(10)
+        print("************************************************************")
+        seguir = input("Deseas seguir con la simulacion? S si, N no").upper()
+    if seguir == "S":
+        rondas -= 1
+    else:
+        rondas = 0
+        print("Se ha acabado la simulacion")
