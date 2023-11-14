@@ -18,14 +18,21 @@ class Spino(Dinosaurio):
             self.vida = 0
 
     def atacar(self,presa):
-        if isinstance(presa,Trike):
-            sobrevive = random.randint(1,10)
+        # Esta variable sera 0 o 1 siendo 0 el atacante y 1 la presa
+        vivo = 0
+        if isinstance(presa, Trike):
+            sobrevive = random.randint(1, 10)
             if sobrevive >= 3:
-                self.vida = 0
-        if isinstance(presa,Spino) or isinstance(presa,Rex):
+                vivo = 0
+            else:
+                vivo = 1
+        if isinstance(presa, Spino) or isinstance(presa, Rex):
             sobrevive = random.randint(0, 1)
             if sobrevive == 1:
-                self.vida = 0
+                vivo = 0
+            else:
+                vivo = 1
+        return vivo
 
 
 

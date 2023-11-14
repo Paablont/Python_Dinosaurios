@@ -48,7 +48,7 @@ class Dinosaurio:
         return (f"Nombre: {self.nombre} \n"
                 f"Vida: {self.vida}\n"
                 f"Energia: {self.energia}\n"
-                f"Posicion: {self.posicion}")
+                f"Posicion: {self.posicion}\n")
 
 
 
