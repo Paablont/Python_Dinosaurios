@@ -13,10 +13,6 @@ class Spino(Dinosaurio):
         for a in range(casillas):
             self.energia -= 2
 
-    def atacado(self,probabilidad):
-        if probabilidad <= 5:
-            self.vida = 0
-
     def atacar(self,presa):
         # Esta variable sera 0 o 1 siendo 0 el atacante y 1 la presa
         vivo = 0

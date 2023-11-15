@@ -1,8 +1,5 @@
 from Dinosaurio import *
 
-
-
-
 class Trike(Dinosaurio):
     def __init__(self,nombre, vida, energia,posicion):
         super().__init__(nombre,vida, energia,posicion)
@@ -12,9 +9,7 @@ class Trike(Dinosaurio):
         for a in range(casillas):
             self.energia -= 5
 
-    def atacado(self,probabilidad):
-        if probabilidad <= 8:
-            self.vida = 0
+
 
 
 
