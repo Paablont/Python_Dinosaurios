@@ -5,7 +5,7 @@ from Spino import *
 
 class Rex(Dinosaurio):
     def __init__(self, nombre, vida, energia, posicion):
-        super().__init__(nombre, vida, energia, posicion)
+        super(Rex,self).__init__(nombre, vida, energia, posicion)
 
     def desplazar(self,casillas):
         super().desplazar(casillas)

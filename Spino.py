@@ -6,7 +6,7 @@ from Trike import *
 
 class Spino(Dinosaurio):
     def __init__(self, nombre, vida, energia, posicion):
-        super().__init__(nombre, vida, energia, posicion)
+        super(Spino,self).__init__(nombre, vida, energia, posicion)
 
     def desplazar(self,casillas):
         super().desplazar(casillas)
